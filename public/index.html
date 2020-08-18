@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Find a Match on Tinder</title>
+
+    <!-- Compiled and minified CSS -->
+    <!-- Materialze-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+    <!-- Materialize icons-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <link href="styles.css" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="nav-wrapper center" style=" background-color: #d5e4e0;">
+                <!-- <a href="#" class="brand-logo" style="height: 100%;"> -->
+                <img src="assets/flame.png" alt="" class="circle responsive-img"
+                    style="height: 100%;padding-top: 5px; padding-left: 15px;">
+
+                </a>
+                <!-- 
+                <ul id="nav-mobile" class="right hide-on-med-and-down">
+                    <li><a href="https://www.linkedin.com/in/alessiobonti">Linkedin</a></li>
+                </ul> -->
+            </div>
+        </nav>
+    </header>
+    <main>
+
+
+
+        <div class="container center" id="welcome">
+
+            <h1>Welcome to Tinder</h1>
+
+            <div class="row center" style="height: 150px;">
+                <img src="assets/flame.png" alt="" style="height: 100%;padding-top: 5px; padding-left: 15px;">
+            </div>
+
+            <div class="row center">
+                <td>
+                    <!-- Modal Trigger -->
+                    <a class="waves-effect waves-light btn modal-trigger" href="#profileModal">Create a new profile</a>
+                </td>
+                <td>
+                    <!-- Modal Trigger -->
+                    <a class="waves-effect waves-light btn modal-trigger" href="#profileModal1">I already have a
+                        profile</a>
+                </td>
+            </div>
+        </div>
+
+        <div class="modal" id="profileModal">
+            <div class="modal-content center >
+                <h4>Create a new profile</h4>
+                <p>Tell us a little about yourself!</p>
+                <div class=" row ">
+                    <form class=" row">
+                <div class="input-field col s12 m9 l10">
+                    <input value="" id="name" type="text" class="validate">
+                    <label class="active" for="name">First Name</label>
+                </div>
+                <div class="row">
+                    <div class="input-field col s12 m9 l10 ">
+                        <input value="" id="age" type="number" class="validate">
+                        <label class="active" for="age">Age</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s12 m9 l10">
+                        <input value="" id="bio" type="text" class="validate">
+                        <label class="active" for="bio">Bio</label>
+                        <span class="helper-text">In a few words, tell us about your passions, interests,
+                            hobbies.</span>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s12 m9 l10">
+                        <input value="" id="pic" type="url" class="validate">
+                        <label class="active" for="pic">Picture URL</label>
+                        <span class="helper-text" data-error="Please enter a valid URL" data-success="Great!">URL
+                            containing your picture</span>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s12 m9 l10">
+                        <input value="" id="email" type="email" class="validate">
+                        <label class="active" for="email">Email</label>
+                        <span class="helper-text" data-error="Please enter a valid email address"
+                            data-success="Great!">Your email for receiving messages</span>
+                    </div>
+                </div>
+                </form>
+            </div>
+
+            <div class="modal-footer">
+                <a href="#!" class="modal-close waves-effect waves-green btn-flat" id="profileButton">Start Matching
+                    <i class="material-icons right">send</i></a>
+                <button id="profileButton1" class="btn-large waves-effect waves-light" type="submit">Start Matching
+                    <i class="material-icons right">send</i>
+                </button>
+            </div>
+        </div>
+
+        </div>
+        <!-- This is the portion to be displayed when viewing profiles for matching purposes; it begins as hidden-->
+        <div class="container hidden center " id="matching">
+            <div id="instructions" style="padding-top:20px">
+                <p> <em>Swipe right on a profile that you like, swipe left if you don't, or use the buttons
+                        provided</em>
+                </p>
+            </div>
+            <div class="col s12 m8 l3 center card" id="card" >
+                <div class="center">
+                    <h4 id="nameAge">The name, age</h4>
+                    <div class="row valign-wrapper">
+                        <img src="assets/prof.jpeg" id="profPic" alt="" draggable="false" class="center responsive-img">
+                    </div>
+                    <div class="row center">
+                        <p id="bio">The bio</p>
+                    </div>
+                </div>
+                <div class="row center">
+
+                    <button id="nopeButton" class="btn-large waves-effect waves-light" type="submit">No thank you
+                    </button>
+
+                    <button id="likeButton" class="btn-large waves-effect waves-light" type="submit">I like it!
+                    </button>
+                </div>
+            </div>
+
+
+        </div>
+
+    </main>
+    <footer class="page-footer">
+        <div class="footer-copyright">
+            <div class="container">
+                © 2020 Copyright Kat Steen
+                <a class="grey-text text-lighten-4 right" href="https://github.com/kats8/sit725-ass1">
+            </div>
+        </div>
+    </footer>
+
+
+
+
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+    <script src="env.js"></script>
+
+</body>
+
+</html>
