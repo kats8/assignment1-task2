@@ -105,11 +105,8 @@ function validateProfileForm() {
             oldEnough = true;
             if (!email.checkValidity())
                 alert('Please provide a valid email so we can notify you of matches');
-            //if wunderage, alert and send back to home screen
         } else {
             alert('Sorry. You must be 18 years or older to use this service');
-            $('#welcome').removeClass('hidden');
-            $('#profileEntry').addClass('hidden')
         }
     } else alert('Please enter your date of birth');
 
