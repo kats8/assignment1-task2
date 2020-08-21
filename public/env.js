@@ -65,7 +65,9 @@ let profileStack = [
 const newProfileFunction = () => {
     //hide the welcome container
     $('#welcome').addClass('hidden');
-    //shows the profile entry container
+    //clear input fields in the profile entry form
+    document.getElementById("profileForm").reset();
+    //show the profile entry container
     $('#profileEntry').removeClass('hidden');
 }
 
